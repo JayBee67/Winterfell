@@ -14,7 +14,18 @@ config/name="Winterfell - A 2D 1Bit Pixel Platformer"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=384
+window/size/viewport_height=216
+window/size/window_width_override=1024
+window/size/window_height_override=576
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
