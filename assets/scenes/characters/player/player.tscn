@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3oeg4kewugjm"]
+
+[ext_resource type="SpriteFrames" uid="uid://u440j517bv12" path="res://assets/resources/player_type_1_sprite_frames.tres" id="1_wmlxx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hynwy"]
+radius = 9.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n7m8t"]
+radius = 4.12311
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yk7gr"]
+size = Vector2(8, 9)
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_wmlxx")
+animation = &"idle"
+autoplay = "idle"
+offset = Vector2(0, -8)
+
+[node name="HitboxArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_hynwy")
+debug_color = Color(0.313657, 0.613424, 0.364835, 0.42)
+
+[node name="HurtboxArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxArea"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_n7m8t")
+debug_color = Color(0.801016, 0.400163, 0.348764, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_yk7gr")

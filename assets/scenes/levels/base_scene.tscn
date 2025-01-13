@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://bca73f4l7uitq"]
+
+[ext_resource type="TileSet" uid="uid://ceies6cnr8qj8" path="res://assets/resources/kenney_1_bit_tileset.tres" id="1_fs2ly"]
+
+[node name="BaseScene" type="Node2D"]
+
+[node name="PlayerStartPosition" type="Node2D" parent="."]
+
+[node name="BackgroundLayer" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_fs2ly")
+
+[node name="MidgroundLayer" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_fs2ly")
+
+[node name="ForegroundLayer" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_fs2ly")
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="EnemyGoals" type="Node" parent="."]
+
+[node name="Hazards" type="Node" parent="."]
+
+[node name="Collectibles" type="Node" parent="."]
+
+[node name="Interactibles" type="Node" parent="."]

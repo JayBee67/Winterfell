@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://cskluutp5vx4u"]
+
+[ext_resource type="Texture2D" uid="uid://djdapnenatmeu" path="res://assets/graphics/player/type_3/tile_0281.png" id="1_6ir8y"]
+[ext_resource type="Texture2D" uid="uid://bv5ae1ob74bi7" path="res://assets/graphics/player/type_3/tile_0284.png" id="2_8osi5"]
+[ext_resource type="Texture2D" uid="uid://b21h2xftaqsvu" path="res://assets/graphics/player/type_3/tile_0282.png" id="3_1tvvv"]
+[ext_resource type="Texture2D" uid="uid://5fwjhfyymh3v" path="res://assets/graphics/player/type_3/tile_0283.png" id="4_dv5v1"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6ir8y")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8osi5")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6ir8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1tvvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dv5v1")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]
