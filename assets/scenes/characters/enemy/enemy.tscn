@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8ya25aqmwwmn"]
+
+[ext_resource type="SpriteFrames" uid="uid://dc4c3sp208bj3" path="res://assets/resources/enemy_type_1_sprite_frames.tres" id="1_2t0y4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vw2p4"]
+radius = 4.12311
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilp43"]
+size = Vector2(8, 9)
+
+[node name="Enemy" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_2t0y4")
+animation = &"walk"
+offset = Vector2(0, -8)
+
+[node name="HurtboxArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxArea"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_vw2p4")
+debug_color = Color(0.844794, 0.364175, 0.282326, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_ilp43")
