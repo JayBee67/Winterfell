@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://4ppk7vf18jje"]
+
+[ext_resource type="Script" uid="uid://c0ppf1getm3x5" path="res://assets/scenes/hud/main_menu.gd" id="1_a4upw"]
+[ext_resource type="Theme" uid="uid://cea08nya1kv5i" path="res://assets/resources/winterfell_theme.tres" id="1_fsh2t"]
+[ext_resource type="Texture2D" uid="uid://hyleupqd1tt" path="res://assets/graphics/player/type_1/tile_0240.png" id="2_8ekmk"]
+[ext_resource type="Texture2D" uid="uid://deg1bbe4k0eb2" path="res://assets/graphics/player/type_2/tile_0260.png" id="3_a4upw"]
+[ext_resource type="Texture2D" uid="uid://ce1anodksbf44" path="res://assets/graphics/player/type_3/tile_0280.png" id="4_km280"]
+[ext_resource type="Texture2D" uid="uid://cxxom11u16m0k" path="res://assets/graphics/player/type_4/tile_0300.png" id="5_vplmt"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a4upw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -63.0
+offset_right = 60.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="GameTitle" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_fsh2t")
+theme_override_colors/font_color = Color(0.677505, 0.784652, 1, 1)
+text = "Winterfell"
+horizontal_alignment = 1
+
+[node name="EmptyLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PlayerSelect" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_fsh2t")
+theme_override_font_sizes/font_size = 8
+text = "Choose Player"
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 10
+columns = 4
+
+[node name="P1Button" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_8ekmk")
+
+[node name="P2Button" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_a4upw")
+
+[node name="P3Button" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_km280")
+
+[node name="P4Button" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_vplmt")

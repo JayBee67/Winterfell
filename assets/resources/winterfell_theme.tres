@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cea08nya1kv5i"]
+
+[ext_resource type="FontFile" uid="uid://b2gss3m85ivjj" path="res://assets/fonts/Our-Arcade-Games.ttf" id="1_rtiyb"]
+
+[resource]
+default_font = ExtResource("1_rtiyb")
