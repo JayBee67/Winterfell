@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bca73f4l7uitq"]
+[gd_scene load_steps=3 format=3 uid="uid://bca73f4l7uitq"]
 
 [ext_resource type="TileSet" uid="uid://ceies6cnr8qj8" path="res://assets/resources/kenney_1_bit_tileset.tres" id="1_fs2ly"]
+[ext_resource type="PackedScene" uid="uid://27occvqhh13v" path="res://assets/scenes/camera/game_camera.tscn" id="1_m426i"]
 
-[node name="BaseScene" type="Node2D"]
+[node name="BaseLevel" type="Node2D"]
+
+[node name="GameCamera" parent="." instance=ExtResource("1_m426i")]
 
 [node name="PlayerStartPosition" type="Node2D" parent="."]
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://6lkl4h6wddo7"]
+
+[ext_resource type="Texture2D" uid="uid://dwqlgaesblip0" path="res://assets/graphics/spikes/tile_0183.png" id="1_16xr5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3y5hj"]
+size = Vector2(10, 6)
+
+[node name="SpikesDown" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_16xr5")
+offset = Vector2(0, -8)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_3y5hj")
