@@ -42,10 +42,23 @@ jump={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="TERRAIN"
+2d_physics/layer_2="PLAYER"
+2d_physics/layer_3="ENEMIES"
+2d_physics/layer_14="TRIGGERS"
+2d_physics/layer_15="COLLECTIBLES"
+2d_physics/layer_16="INTERACTIBLES"
+2d_physics/layer_20="HAZARDS"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+rendering_device/driver.ios="d3d12"
+rendering_device/driver.macos="d3d12"
 gl_compatibility/driver.windows="opengl3_angle"
+gl_compatibility/driver.macos="opengl3_angle"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

@@ -1,14 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://6lkl4h6wddo7"]
+[gd_scene load_steps=4 format=3 uid="uid://6lkl4h6wddo7"]
 
-[ext_resource type="Texture2D" uid="uid://dwqlgaesblip0" path="res://assets/graphics/spikes/tile_0183.png" id="1_16xr5"]
+[ext_resource type="Script" uid="uid://bxryd27uvyg8u" path="res://assets/scripts/hazards/spikes/spikes_down.gd" id="1_16xr5"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ah5xd"]
+load_path = "res://.godot/imported/tile_0183.png-fe3376577a7dcd97682c8f7887c44adf.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3y5hj"]
 size = Vector2(10, 6)
 
 [node name="SpikesDown" type="Node2D"]
+script = ExtResource("1_16xr5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_16xr5")
+texture = SubResource("CompressedTexture2D_ah5xd")
 offset = Vector2(0, -8)
 
 [node name="Area2D" type="Area2D" parent="."]

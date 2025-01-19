@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://c75gr0x8x6fu8"]
+
+[ext_resource type="Script" uid="uid://dsey5uucu5tuc" path="res://assets/scripts/collectibles/jewel/jewel.gd" id="1_67jee"]
+[ext_resource type="Texture2D" uid="uid://bb5nwgeww46qt" path="res://assets/graphics/collectibles/jewel/tile_0102.png" id="2_rumse"]
+
+[sub_resource type="Animation" id="Animation_rumse"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_67jee"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t70vi"]
+_data = {
+&"RESET": SubResource("Animation_rumse"),
+&"idle": SubResource("Animation_67jee")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t70vi"]
+radius = 8.0
+
+[node name="Jewel" type="Node2D"]
+script = ExtResource("1_67jee")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_t70vi")
+}
+autoplay = "idle"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_rumse")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16384
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_t70vi")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_entered"]

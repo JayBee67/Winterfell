@@ -61,21 +61,26 @@ theme_override_constants/h_separation = 10
 columns = 4
 
 [node name="P1Button" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+editor_description = "Character name: Zero One"
 layout_mode = 2
 texture_normal = ExtResource("3_7ywe8")
 texture_hover = ExtResource("4_a0u28")
 
 [node name="P2Button" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+editor_description = "Character name: Binary Star"
 layout_mode = 2
 texture_normal = ExtResource("5_qeyto")
 texture_hover = ExtResource("6_mwb6e")
 
 [node name="P3Button" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+editor_description = "Character name: Glitch"
 layout_mode = 2
 texture_normal = ExtResource("7_7tral")
 texture_hover = ExtResource("8_tlxj8")
 
 [node name="P4Button" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+editor_description = "Character name: Pixel Dust
+"
 layout_mode = 2
 texture_normal = ExtResource("9_bfx2s")
 texture_hover = ExtResource("10_da8nm")
