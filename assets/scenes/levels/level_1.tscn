@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=4 uid="uid://b0dbx7c5vr0jq"]
+[gd_scene load_steps=8 format=4 uid="uid://b0dbx7c5vr0jq"]
 
 [ext_resource type="PackedScene" uid="uid://bca73f4l7uitq" path="res://assets/scenes/levels/base_level.tscn" id="1_5mb2f"]
 [ext_resource type="TileSet" uid="uid://nn71p7xipp60" path="res://assets/resources/kenney_1_bit_transparent_tileset.tres" id="2_m0dby"]
 [ext_resource type="PackedScene" uid="uid://d3oeg4kewugjm" path="res://assets/scenes/characters/player/player.tscn" id="2_n07sh"]
 [ext_resource type="PackedScene" uid="uid://6c15vf6vwqs5" path="res://assets/scenes/hazards/pendulum/pendulum.tscn" id="3_7ugeu"]
 [ext_resource type="PackedScene" uid="uid://c75gr0x8x6fu8" path="res://assets/scenes/collectibles/jewel/jewel.tscn" id="3_ivb3n"]
+[ext_resource type="PackedScene" uid="uid://6lkl4h6wddo7" path="res://assets/scenes/hazards/spikes/spikes_down.tscn" id="4_u4b5a"]
+[ext_resource type="PackedScene" uid="uid://bmxb81l141xbr" path="res://assets/scenes/hazards/spikes/spikes_up.tscn" id="5_sfv5u"]
 
 [node name="Level1" instance=ExtResource("1_5mb2f")]
 
@@ -12,7 +14,7 @@
 self_modulate = Color(0.00080258, 0, 0.556324, 1)
 
 [node name="ForegroundLayer" parent="." index="4"]
-tile_map_data = PackedByteArray("AAADAA0AAQAQAAcAAAADAAwAAQATAAUAAAADAAsAAQARAAYAAAADAAoAAQARAAYAAAADAAkAAQARAAYAAAADAAgAAQARAAUAAAACAA0AAQAQAAcAAAACAAwAAQAQAAYAAAACAAsAAQAQAAYAAAACAAoAAQAQAAYAAAACAAkAAQAQAAYAAAACAAgAAQAQAAUAAAABAA0AAQAQAAcAAAABAAwAAQAQAAYAAAABAAsAAQAQAAYAAAABAAoAAQAQAAYAAAABAAkAAQAQAAYAAAABAAgAAQAQAAUAAAAAAA0AAQAPAAcAAAAAAAwAAQAPAAYAAAAAAAsAAQAPAAYAAAAAAAoAAQAPAAYAAAAAAAkAAQAPAAYAAAAAAAgAAQAPAAUAAAAGAAgAAQASAAgAAAAPAAgAAQASAAgAAAAVAA0AAQARAAcAAAAVAAwAAQARAAYAAAAVAAsAAQARAAYAAAAVAAoAAQARAAYAAAAVAAkAAQARAAYAAAAVAAgAAQARAAUAAAAUAA0AAQAQAAcAAAAUAAwAAQAQAAYAAAAUAAsAAQAQAAYAAAAUAAoAAQAQAAYAAAAUAAkAAQAQAAYAAAAUAAgAAQAQAAUAAAATAA0AAQAQAAcAAAATAAwAAQAQAAYAAAATAAsAAQAQAAYAAAATAAoAAQAQAAYAAAATAAkAAQAQAAYAAAATAAgAAQAQAAUAAAASAA0AAQAQAAcAAAASAAwAAQATAAgAAAASAAsAAQAPAAYAAAASAAoAAQAPAAYAAAASAAkAAQAPAAYAAAASAAgAAQAPAAUAAAARAAMAAQARAAcAAAAQAAMAAQAQAAcAAAAQAAIAAQAQAAYAAAAQAAEAAQAQAAYAAAAQAAAAAQAQAAUAAAAPAAMAAQAQAAcAAAAPAAIAAQAQAAYAAAAPAAEAAQAQAAYAAAAPAAAAAQAQAAUAAAAOAAMAAQAQAAcAAAAOAAIAAQAQAAYAAAAOAAEAAQAQAAYAAAAOAAAAAQAQAAUAAAANAAMAAQAQAAcAAAANAAIAAQAQAAYAAAANAAEAAQAQAAYAAAANAAAAAQAQAAUAAAAMAAMAAQAQAAcAAAAMAAIAAQAQAAYAAAAMAAEAAQAQAAYAAAAMAAAAAQAQAAUAAAALAAMAAQAQAAcAAAALAAIAAQAQAAYAAAALAAEAAQAQAAYAAAALAAAAAQAQAAUAAAAKAAMAAQAQAAcAAAAKAAIAAQAQAAYAAAAKAAEAAQAQAAYAAAAKAAAAAQAQAAUAAAAJAAMAAQAQAAcAAAAJAAIAAQAQAAYAAAAJAAEAAQAQAAYAAAAJAAAAAQAQAAUAAAAIAAMAAQAQAAcAAAAIAAIAAQAQAAYAAAAIAAEAAQAQAAYAAAAIAAAAAQAQAAUAAAAHAAMAAQAQAAcAAAAHAAIAAQAQAAYAAAAHAAEAAQAQAAYAAAAHAAAAAQAQAAUAAAAGAAMAAQAQAAcAAAAGAAIAAQAQAAYAAAAGAAEAAQAQAAYAAAAGAAAAAQAQAAUAAAAFAAMAAQAQAAcAAAAFAAIAAQAQAAYAAAAFAAEAAQAQAAYAAAAFAAAAAQAQAAUAAAAEAAMAAQAPAAcAAAAEAAIAAQAPAAYAAAAEAAEAAQAPAAYAAAAEAAAAAQAPAAUAAAD//wYAAQAGAAYAAAD+/wYAAQAFAAYAAAD9/wYAAQAEAAYAAAD8/wQAAQARAAgAAAD7/wQAAQAQAAgAAAD6/wQAAQAPAAgAAAD//wIAAQARAAgAAAD+/wIAAQAQAAgAAAD9/wIAAQAPAAgAAAACAAAAAQARAAgAAAABAAAAAQAQAAgAAAAAAAAAAQAPAAgAAAAUAAcAAQAQAAIAAAARAAIAAQARAAYAAAARAAEAAQARAAYAAAARAAAAAQARAAUAAAAVAAAAAQARAAgAAAAUAAAAAQAQAAgAAAATAAAAAQAPAAgAAAAYAAIAAQAGAAYAAAAXAAIAAQAFAAYAAAAWAAIAAQAEAAYAAAAbAAQAAQARAAgAAAAaAAQAAQAQAAgAAAAZAAQAAQAPAAgAAAAYAAYAAQARAAgAAAAXAAYAAQAQAAgAAAAWAAYAAQAPAAgAAAD+/wUAAQAGAAkAABAXAAEAAQAGAAkAAAAKAAgAAQAPAAgAAAALAAgAAQARAAgAAAAEAAwAAQAQAAUAAAAFAA0AAQARAAcAAAAFAAwAAQARAAUAAAAEAA0AAQAQAAcAAAARAAwAAQAQAAUAAAAQAAwAAQAPAAUAAAAQAA0AAQAPAAcAAAARAA0AAQAQAAcAAAAKAA0AAQAPAAgAAAALAA0AAQARAAgAAAA=")
+tile_map_data = PackedByteArray("AAADAA0AAQAQAAYAAAADAAwAAQAQAAYAAAADAAsAAQAQAAYAAAADAAoAAQATAAUAAAADAAkAAQARAAYAAAADAAgAAQARAAUAAAACAA0AAQAQAAYAAAACAAwAAQAQAAYAAAACAAsAAQAQAAYAAAACAAoAAQAQAAYAAAACAAkAAQAQAAYAAAACAAgAAQAQAAUAAAABAA0AAQAQAAYAAAABAAwAAQAQAAYAAAABAAsAAQAQAAYAAAABAAoAAQAQAAYAAAABAAkAAQAQAAYAAAABAAgAAQAQAAUAAAAAAA0AAQAPAAYAAAAAAAwAAQAPAAYAAAAAAAsAAQAPAAYAAAAAAAoAAQAPAAYAAAAAAAkAAQAPAAYAAAAAAAgAAQAPAAUAAAAGAAgAAQASAAgAAAAPAAgAAQASAAgAAAAVAA0AAQARAAYAAAAVAAwAAQARAAYAAAAVAAsAAQARAAYAAAAVAAoAAQARAAYAAAAVAAkAAQARAAYAAAAVAAgAAQARAAUAAAAUAA0AAQAQAAYAAAAUAAwAAQAQAAYAAAAUAAsAAQAQAAYAAAAUAAoAAQAQAAYAAAAUAAkAAQAQAAYAAAAUAAgAAQAQAAUAAAATAA0AAQAQAAYAAAATAAwAAQAQAAYAAAATAAsAAQAQAAYAAAATAAoAAQAQAAYAAAATAAkAAQAQAAYAAAATAAgAAQAQAAUAAAASAA0AAQAQAAYAAAASAAwAAQAQAAYAAAASAAsAAQAQAAYAAAASAAoAAQATAAgAAAASAAkAAQAPAAYAAAASAAgAAQAPAAUAAAARAAMAAQARAAYAAAAQAAMAAQATAAcAAAAQAAIAAQAQAAYAAAAQAAEAAQAQAAYAAAAQAAAAAQAQAAUAAAAPAAMAAQAQAAcAAAAPAAIAAQAQAAYAAAAPAAEAAQAQAAYAAAAPAAAAAQAQAAUAAAAOAAMAAQAQAAcAAAAOAAIAAQAQAAYAAAAOAAEAAQAQAAYAAAAOAAAAAQAQAAUAAAANAAMAAQAQAAcAAAANAAIAAQAQAAYAAAANAAEAAQAQAAYAAAANAAAAAQAQAAUAAAAMAAMAAQAQAAcAAAAMAAIAAQAQAAYAAAAMAAEAAQAQAAYAAAAMAAAAAQAQAAUAAAALAAMAAQAQAAcAAAALAAIAAQAQAAYAAAALAAEAAQAQAAYAAAALAAAAAQAQAAUAAAAKAAMAAQAQAAcAAAAKAAIAAQAQAAYAAAAKAAEAAQAQAAYAAAAKAAAAAQAQAAUAAAAJAAMAAQAQAAcAAAAJAAIAAQAQAAYAAAAJAAEAAQAQAAYAAAAJAAAAAQAQAAUAAAAIAAMAAQAQAAcAAAAIAAIAAQAQAAYAAAAIAAEAAQAQAAYAAAAIAAAAAQAQAAUAAAAHAAMAAQAQAAcAAAAHAAIAAQAQAAYAAAAHAAEAAQAQAAYAAAAHAAAAAQAQAAUAAAAGAAMAAQAQAAcAAAAGAAIAAQAQAAYAAAAGAAEAAQAQAAYAAAAGAAAAAQAQAAUAAAAFAAMAAQAQAAcAAAAFAAIAAQAQAAYAAAAFAAEAAQAQAAYAAAAFAAAAAQAQAAUAAAAEAAMAAQAPAAcAAAAEAAIAAQAPAAYAAAAEAAEAAQAPAAYAAAAEAAAAAQAPAAUAAAD//wYAAQAGAAYAAAD+/wYAAQAFAAYAAAD9/wYAAQAEAAYAAAD8/wQAAQARAAgAAAD7/wQAAQAQAAgAAAD6/wQAAQAPAAgAAAD//wIAAQAQAAgAAAD+/wIAAQAQAAgAAAD9/wIAAQAPAAgAAAACAAAAAQARAAUAAAABAAAAAQAQAAUAAAAAAAAAAQAPAAUAAAAUAAcAAQAQAAIAAAARAAIAAQARAAYAAAARAAEAAQARAAYAAAARAAAAAQARAAUAAAAVAAAAAQARAAgAAAAUAAAAAQAQAAgAAAATAAAAAQAPAAgAAAAYAAIAAQAGAAYAAAAXAAIAAQAFAAYAAAAWAAIAAQAEAAYAAAAbAAQAAQARAAUAAAAaAAQAAQAQAAUAAAAZAAQAAQAPAAUAAAAYAAYAAQAQAAcAAAAXAAYAAQAQAAcAAAAWAAYAAQAQAAcAAAD+/wUAAQAGAAkAABAXAAEAAQAGAAkAAAAKAAgAAQAPAAgAAAALAAgAAQARAAgAAAAEAAwAAQATAAUAAAAFAA0AAQATAAUAAAAFAAwAAQARAAUAAAAEAA0AAQAQAAYAAAARAAwAAQATAAgAAAAQAAwAAQAPAAUAAAAQAA0AAQATAAgAAAARAA0AAQAQAAYAAAAJAAsAAQARAAgAAAAIAAsAAQAPAAgAAAANAAsAAQARAAgAAAAMAAsAAQAPAAgAAAAEAAoAAQARAAUAAAARAAoAAQAPAAUAAAAVAA4AAQARAAcAAAAUAA4AAQAQAAcAAAATAA4AAQAQAAcAAAASAA4AAQAQAAcAAAARAA4AAQAQAAcAAAAQAA4AAQAQAAcAAAAPAA4AAQAQAAcAAAAOAA4AAQAQAAcAAAANAA4AAQAQAAcAAAAMAA4AAQAQAAcAAAALAA4AAQAQAAcAAAAKAA4AAQAQAAcAAAAJAA4AAQAQAAcAAAAIAA4AAQAQAAcAAAAHAA4AAQAQAAcAAAAGAA4AAQAQAAcAAAAFAA4AAQAQAAcAAAAEAA4AAQAQAAcAAAADAA4AAQAQAAcAAAACAA4AAQAQAAcAAAABAA4AAQAQAAcAAAAAAA4AAQAPAAcAAAAPAA0AAQAQAAUAAAAOAA0AAQAQAAUAAAANAA0AAQAQAAUAAAAMAA0AAQAQAAUAAAALAA0AAQAQAAUAAAAKAA0AAQAQAAUAAAAJAA0AAQAQAAUAAAAIAA0AAQAQAAUAAAAHAA0AAQAQAAUAAAAGAA0AAQAQAAUAAAAEAAsAAQARAAYAAAARAAsAAQAPAAYAAAAVAAYAAQAQAAcAAAAUAAYAAQAQAAcAAAATAAYAAQAQAAcAAAASAAYAAQAQAAcAAAARAAYAAQAQAAcAAAAQAAYAAQAPAAcAAAARAAUAAQATAAUAAAARAAQAAQARAAYAAAAQAAUAAQAPAAYAAAAQAAQAAQAPAAYAAAATAAUAAQAQAAUAAAASAAUAAQAQAAUAAAAaAAYAAQAQAAcAAAAaAAUAAQAQAAYAAAAZAAYAAQAQAAcAAAAZAAUAAQATAAgAAAAbAAYAAQARAAcAAAAbAAUAAQARAAYAAAAYAAUAAQAQAAUAAAAXAAUAAQAQAAUAAAAWAAUAAQAQAAUAAAAVAAUAAQAQAAUAAAAUAAUAAQAQAAUAAAACAAMAAQARAAcAAAACAAIAAQARAAYAAAACAAEAAQARAAYAAAABAAMAAQAQAAcAAAABAAIAAQAQAAYAAAABAAEAAQAQAAYAAAAAAAMAAQAPAAcAAAAAAAIAAQATAAcAAAAAAAEAAQAPAAYAAAA=")
 tile_set = ExtResource("2_m0dby")
 
 [node name="Pendulum1" parent="Hazards" index="0" instance=ExtResource("3_7ugeu")]
@@ -20,19 +22,144 @@ position = Vector2(104, 64)
 
 [node name="Pendulum2" parent="Hazards" index="1" instance=ExtResource("3_7ugeu")]
 position = Vector2(176, 64)
-script = null
+
+[node name="Pendulum3" parent="Hazards" index="2" instance=ExtResource("3_7ugeu")]
+position = Vector2(248, 64)
+
+[node name="SpikesDown1" parent="Hazards" index="3" instance=ExtResource("4_u4b5a")]
+position = Vector2(104, 208)
+spike_type = 1
+
+[node name="SpikesDown2" parent="Hazards" index="4" instance=ExtResource("4_u4b5a")]
+position = Vector2(248, 208)
+
+[node name="SpikesDown3" parent="Hazards" index="5" instance=ExtResource("4_u4b5a")]
+position = Vector2(440, 64)
+spike_type = 1
+
+[node name="SpikesDown4" parent="Hazards" index="6" instance=ExtResource("4_u4b5a")]
+position = Vector2(312, 0)
+
+[node name="SpikesDown5" parent="Hazards" index="7" instance=ExtResource("4_u4b5a")]
+position = Vector2(256, 0)
+spike_type = 1
+
+[node name="SpikesDown6" parent="Hazards" index="8" instance=ExtResource("4_u4b5a")]
+position = Vector2(200, 0)
+
+[node name="SpikesDown7" parent="Hazards" index="9" instance=ExtResource("4_u4b5a")]
+position = Vector2(152, 0)
+spike_type = 1
+
+[node name="SpikesDown8" parent="Hazards" index="10" instance=ExtResource("4_u4b5a")]
+position = Vector2(96, 0)
+spike_type = 1
+
+[node name="SpikesDown9" parent="Hazards" index="11" instance=ExtResource("4_u4b5a")]
+position = Vector2(40, 0)
+
+[node name="SpikesDown10" parent="Hazards" index="12" instance=ExtResource("4_u4b5a")]
+position = Vector2(-88, 64)
+spike_type = 1
+
+[node name="SpikesUp1" parent="Hazards" index="13" instance=ExtResource("5_sfv5u")]
+position = Vector2(72, 64)
+
+[node name="SpikesUp2" parent="Hazards" index="14" instance=ExtResource("5_sfv5u")]
+position = Vector2(88, 64)
+
+[node name="SpikesUp3" parent="Hazards" index="15" instance=ExtResource("5_sfv5u")]
+position = Vector2(136, 64)
+
+[node name="SpikesUp4" parent="Hazards" index="16" instance=ExtResource("5_sfv5u")]
+position = Vector2(152, 64)
+
+[node name="SpikesUp5" parent="Hazards" index="17" instance=ExtResource("5_sfv5u")]
+position = Vector2(216, 64)
 
 [node name="Jewel1" parent="Collectibles" index="0" instance=ExtResource("3_ivb3n")]
-position = Vector2(-40, 16)
+position = Vector2(136, 200)
 
 [node name="Jewel2" parent="Collectibles" index="1" instance=ExtResource("3_ivb3n")]
-position = Vector2(-24, 16)
+position = Vector2(152, 200)
 
 [node name="Jewel3" parent="Collectibles" index="2" instance=ExtResource("3_ivb3n")]
-position = Vector2(-8, 16)
+position = Vector2(200, 200)
+
+[node name="Jewel4" parent="Collectibles" index="3" instance=ExtResource("3_ivb3n")]
+position = Vector2(216, 200)
+
+[node name="Jewel5" parent="Collectibles" index="4" instance=ExtResource("3_ivb3n")]
+position = Vector2(104, 120)
+
+[node name="Jewel6" parent="Collectibles" index="5" instance=ExtResource("3_ivb3n")]
+position = Vector2(176, 120)
+
+[node name="Jewel7" parent="Collectibles" index="6" instance=ExtResource("3_ivb3n")]
+position = Vector2(248, 120)
+
+[node name="Jewel8" parent="Collectibles" index="7" instance=ExtResource("3_ivb3n")]
+position = Vector2(-64, 48)
+
+[node name="Jewel9" parent="Collectibles" index="8" instance=ExtResource("3_ivb3n")]
+position = Vector2(-40, 16)
+
+[node name="Jewel10" parent="Collectibles" index="9" instance=ExtResource("3_ivb3n")]
+position = Vector2(-24, 16)
+
+[node name="Jewel11" parent="Collectibles" index="10" instance=ExtResource("3_ivb3n")]
+position = Vector2(80, -16)
+
+[node name="Jewel12" parent="Collectibles" index="11" instance=ExtResource("3_ivb3n")]
+position = Vector2(96, -32)
+
+[node name="Jewel13" parent="Collectibles" index="12" instance=ExtResource("3_ivb3n")]
+position = Vector2(112, -48)
+
+[node name="Jewel14" parent="Collectibles" index="13" instance=ExtResource("3_ivb3n")]
+position = Vector2(136, -48)
+
+[node name="Jewel15" parent="Collectibles" index="14" instance=ExtResource("3_ivb3n")]
+position = Vector2(152, -32)
+
+[node name="Jewel16" parent="Collectibles" index="15" instance=ExtResource("3_ivb3n")]
+position = Vector2(168, -16)
+
+[node name="Jewel17" parent="Collectibles" index="16" instance=ExtResource("3_ivb3n")]
+position = Vector2(184, -16)
+
+[node name="Jewel18" parent="Collectibles" index="17" instance=ExtResource("3_ivb3n")]
+position = Vector2(200, -32)
+
+[node name="Jewel19" parent="Collectibles" index="18" instance=ExtResource("3_ivb3n")]
+position = Vector2(216, -48)
+
+[node name="Jewel20" parent="Collectibles" index="19" instance=ExtResource("3_ivb3n")]
+position = Vector2(240, -48)
+
+[node name="Jewel21" parent="Collectibles" index="20" instance=ExtResource("3_ivb3n")]
+position = Vector2(256, -32)
+
+[node name="Jewel22" parent="Collectibles" index="21" instance=ExtResource("3_ivb3n")]
+position = Vector2(272, -16)
+
+[node name="Jewel23" parent="Collectibles" index="22" instance=ExtResource("3_ivb3n")]
+position = Vector2(416, 48)
+
+[node name="Jewel24" parent="Collectibles" index="23" instance=ExtResource("3_ivb3n")]
+position = Vector2(376, 64)
+
+[node name="Jewel25" parent="Collectibles" index="24" instance=ExtResource("3_ivb3n")]
+position = Vector2(360, 64)
+
+[node name="Jewel26" parent="Collectibles" index="25" instance=ExtResource("3_ivb3n")]
+position = Vector2(344, 64)
+
+[node name="Jewel27" parent="Collectibles" index="26" instance=ExtResource("3_ivb3n")]
+position = Vector2(328, 64)
+
+[node name="Jewel28" parent="Collectibles" index="27" instance=ExtResource("3_ivb3n")]
+position = Vector2(312, 64)
 
 [node name="Player" parent="." index="10" instance=ExtResource("2_n07sh")]
 position = Vector2(-80, 48)
-
-[editable path="Hazards/Pendulum1"]
-[editable path="Hazards/Pendulum2"]
