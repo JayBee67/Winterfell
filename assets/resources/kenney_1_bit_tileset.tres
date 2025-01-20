@@ -692,8 +692,6 @@ texture = ExtResource("1_oiv3i")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtmnb"]
 texture = ExtResource("2_xh0sv")
-1:0/0 = 0
-2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
 5:0/0 = 0
@@ -1088,6 +1086,9 @@ texture = ExtResource("2_xh0sv")
 17:19/0 = 0
 18:19/0 = 0
 19:19/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:0/0 = 0
 
 [resource]
 physics_layer_0/collision_layer = 1
