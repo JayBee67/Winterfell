@@ -1056,8 +1056,6 @@ texture = ExtResource("2_xh0sv")
 6:18/0 = 0
 7:18/0 = 0
 8:18/0 = 0
-9:18/0 = 0
-10:18/0 = 0
 11:18/0 = 0
 12:18/0 = 0
 13:18/0 = 0
@@ -1089,6 +1087,9 @@ texture = ExtResource("2_xh0sv")
 1:0/0 = 0
 2:0/0 = 0
 0:0/0 = 0
+9:18/animation_frame_0/duration = 0.25
+9:18/animation_frame_1/duration = 0.2
+9:18/0 = 0
 
 [resource]
 physics_layer_0/collision_layer = 1
